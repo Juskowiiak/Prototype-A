@@ -23,7 +23,7 @@ img {
   width: 100%;
   height: auto;
 }
-/* ############################################### */
+/* ####################################################################################################################### */
 .lading {
   border: 1px solid blue;
   width: 100%;
@@ -150,6 +150,7 @@ img {
   width: 100%;
   padding-top: 1rem;
   text-align: center;
+  display: none;
   h3 {
     position: relative;
     font-size: 2rem;
@@ -177,6 +178,62 @@ img {
       border: 1px solid yellow;
       height: 70px;
       width: 90px;
+    }
+  }
+}
+.article {
+  border: 1px solid blue;
+  height: 100vh;
+  position: relative;
+  &-visual {
+    display: flex;
+    &-picture {
+      width: 55%;
+      border: 1px solid orangered;
+      position: relative;
+      &-car {
+        border: 1px solid magenta;
+        width: 70%;
+        height: 80%;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+      }
+    }
+    &-guide {
+      width: 45%;
+      height: 60vh;
+      border: 1px solid crimson;
+      display: flex;
+      flex-direction: column;
+      &-text {
+        border: 1px solid cyan;
+        height: 50%;
+      }
+    }
+  }
+  &-picture {
+    display: grid;
+    height: 40vh;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    &-li {
+      border: 1px solid red;
+      box-shadow: 4px 4px 2px #000;
+      position: relative;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      &-car {
+        border: 1px solid rgb(0, 49, 49);
+        position: absolute;
+        width: 95%;
+        height: 65%;
+        bottom: 0;
+        right: 0;
+      }
     }
   }
 }
