@@ -23,7 +23,7 @@
           <li>Categories</li>
           <li>Contacts</li>
         </ul>
-        <i class="bx bx-menu-alt-right"></i>
+        <i class="bx bx-menu-alt-right" onclick="menu()"></i>
       </header>
       <main class="lading-main">
         <div class="lading-main-text">
@@ -53,55 +53,61 @@
         <li><img src="#" /></li>
         <li><img src="#" /></li>
       </ul>
-      <video
-        class="section-video"
-        src="#"
-        controls
-        height="290"
-        style="box-shadow: 5px 5px 6px rgb(43, 43, 43)"
-        ;
-      ></video>
+      <div class="section-video">
+        <video
+          src="#"
+          controls
+          height="100%"
+          width="100%"
+          style="box-shadow: 5px 5px 6px rgb(43, 43, 43)"
+          ;
+        ></video>
+      </div>
     </section>
     <article class="article">
       <div class="article-visual">
         <div class="article-visual-picture">
-          <img class="article-visual-picture-car" src="#" />
+          <img class="article-visual-picture-car" id="car-model" src="#" />
         </div>
         <div class="article-visual-guide">
           <div class="article-visual-guide-text">
-            <h2>Nome</h2>
+            <h2>Modelo</h2>
             <p>info</p>
           </div>
-          <img src="#" />
+          <div class="article-visual-guide-picture">
+            <img src="#" id="car-info" />
+          </div>
         </div>
       </div>
       <ul class="article-picture">
-        <li class="article-picture-li">
+        <li class="article-picture-li car1">
           <p>marca</p>
           <h3>modelo</h3>
           <img class="article-picture-li-car" src="#" />
         </li>
-        <li class="article-picture-li">
+        <li class="article-picture-li car2">
           <p>marca</p>
           <h3>modelo</h3>
           <img class="article-picture-li-car" src="#" />
         </li>
-        <li class="article-picture-li">
+        <li class="article-picture-li car3">
           <p>marca</p>
           <h3>modelo</h3>
           <img class="article-picture-li-car" src="#" />
         </li>
-        <li class="article-picture-li">
+        <li class="article-picture-li car4">
           <p>marca</p>
           <h3>modelo</h3>
           <img class="article-picture-li-car" src="#" />
         </li>
-        <li class="article-picture-li">
+        <li class="article-picture-li car5">
           <p>marca</p>
           <h3>modelo</h3>
           <img class="article-picture-li-car" src="#" />
         </li>
       </ul>
     </article>
+    <script src="./java/java.js"></script>
+    <script src="./java/java_article.js"></script>
   </body>
 </html>

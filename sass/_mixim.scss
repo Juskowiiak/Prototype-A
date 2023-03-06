@@ -14,3 +14,13 @@
     @content;
   }
 }
+@mixin tela_800 {
+  @media (max-width: 800px) {
+    @content;
+  }
+}
+@mixin tela_650 {
+  @media (max-width: 650px) {
+    @content;
+  }
+}

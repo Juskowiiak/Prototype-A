@@ -33,14 +33,20 @@ img {
   border: 1px solid blue;
   width: 100%;
   padding-top: 2rem;
-  height: 100vh;
-  display: none;
+  overflow: hidden;
+  position: relative;
 }
 .lading-header {
+  position: relative;
   border: 1px solid red;
   display: flex;
   width: 100%;
   align-items: center;
+}
+@media (max-width: 650px) {
+  .lading-header {
+    justify-content: space-between;
+  }
 }
 .lading-header-logo {
   margin-right: 3rem;
@@ -62,8 +68,23 @@ img {
 .lading-header-menu li {
   cursor: pointer;
 }
+@media (max-width: 650px) {
+  .lading-header-menu {
+    display: none;
+  }
+}
+.lading-header .menu-edit {
+  position: absolute;
+  display: block;
+}
 .lading-header i {
   display: none;
+}
+@media (max-width: 650px) {
+  .lading-header i {
+    display: block;
+    font-size: 1.5rem;
+  }
 }
 .lading-main {
   border: 1px solid black;
@@ -172,8 +193,8 @@ img {
 .section {
   border: 1px solid blue;
   width: 100%;
-  padding-top: 1rem;
   text-align: center;
+  padding-block: 2rem 3rem;
   display: none;
 }
 .section h3 {
@@ -199,25 +220,80 @@ img {
   margin-bottom: 2rem;
   gap: 1.5rem;
   flex-wrap: wrap;
+  width: 100%;
+  height: 65px;
+}
+@media (max-width: 1080px) {
+  .section-list {
+    height: 55px;
+  }
+}
+@media (max-width: 800px) {
+  .section-list {
+    height: 45px;
+  }
+}
+@media (max-width: 650px) {
+  .section-list {
+    height: 40px;
+  }
 }
 .section-list li {
   border: 1px solid yellow;
-  height: 70px;
-  width: 90px;
+  height: 100%;
+  width: 7%;
+}
+.section-video {
+  border: 1px solid red;
+  height: 330px;
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 1080px) {
+  .section-video {
+    height: 290px;
+    width: 65%;
+  }
+}
+@media (max-width: 800px) {
+  .section-video {
+    height: 250px;
+    width: 70%;
+  }
+}
+@media (max-width: 650px) {
+  .section-video {
+    height: 220px;
+    width: 70%;
+  }
 }
 
 .article {
-  border: 1px solid blue;
-  height: 100vh;
   position: relative;
+  height: 100vh;
+  display: none;
 }
 .article-visual {
   display: flex;
+  height: 60vh;
+}
+@media (max-width: 1000px) {
+  .article-visual {
+    flex-direction: column;
+    height: 70vh;
+  }
 }
 .article-visual-picture {
   width: 55%;
   border: 1px solid orangered;
   position: relative;
+}
+@media (max-width: 1000px) {
+  .article-visual-picture {
+    min-height: 300px;
+    width: 65%;
+    min-height: 65vh;
+  }
 }
 .article-visual-picture-car {
   border: 1px solid magenta;
@@ -230,15 +306,39 @@ img {
 .article-visual-guide {
   width: 45%;
   height: 60vh;
-  border: 1px solid crimson;
+  border: 1px solid rgb(20, 220, 53);
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 1000px) {
+  .article-visual-guide {
+    flex-direction: row;
+    width: 100%;
+    min-height: 35vh;
+  }
 }
 .article-visual-guide-text {
   border: 1px solid cyan;
   height: 50%;
 }
+@media (max-width: 1000px) {
+  .article-visual-guide-text {
+    width: 50%;
+    height: 100%;
+  }
+}
+.article-visual-guide-picture {
+  border: 1px solid red;
+  height: 50%;
+}
+@media (max-width: 1000px) {
+  .article-visual-guide-picture {
+    width: 50%;
+    height: 100%;
+  }
+}
 .article-picture {
+  position: relative;
   display: grid;
   height: 40vh;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -246,13 +346,54 @@ img {
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
+  border: 1px solid seagreen;
+}
+@media (max-width: 1000px) {
+  .article-picture {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    top: 2rem;
+    right: 7%;
+    height: 50vh;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 650px) {
+  .article-picture {
+    gap: 0.3rem;
+    width: 18%;
+    right: 10%;
+  }
 }
 .article-picture-li {
-  border: 1px solid red;
+  border: 1px solid rgb(1, 104, 122);
   box-shadow: 4px 4px 2px #000;
+  height: 100%;
+  min-width: 100px;
   position: relative;
   padding-top: 1rem;
   padding-left: 1rem;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .article-picture-li {
+    min-width: 40%;
+    height: 32%;
+  }
+}
+@media (max-width: 650px) {
+  .article-picture-li {
+    min-width: 90%;
+    height: 18%;
+  }
+}
+@media (max-width: 1000px) {
+  .article-picture-li h3,
+  .article-picture-li p {
+    display: none;
+  }
 }
 .article-picture-li-car {
   border: 1px solid rgb(0, 49, 49);
@@ -261,6 +402,16 @@ img {
   height: 65%;
   bottom: 0;
   right: 0;
+}
+@media (max-width: 1000px) {
+  .article-picture-li-car {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.efeito {
+  background-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
