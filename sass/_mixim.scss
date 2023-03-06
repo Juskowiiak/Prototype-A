@@ -24,3 +24,8 @@
     @content;
   }
 }
+@mixin tela_500 {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
